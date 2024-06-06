@@ -1,6 +1,6 @@
-# Gerador de OF
+# Commits Report
 
-Este projeto consiste em uma ferramenta para analisar commits em repositórios Git e extrair informações relevantes, como modificações e adições de arquivos, com base em critérios específicos.
+Este projeto consiste em uma ferramenta para gerar relatório de commits feitos em projetos para relatório.
 
 ## Como Rodar o Projeto
 
