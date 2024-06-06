@@ -6,7 +6,6 @@ Este projeto consiste em uma ferramenta para analisar commits em repositórios G
 
 1. **Pré-requisitos**:
    - Certifique-se de ter o Python instalado em sua máquina. Você pode baixar e instalar o Python a partir do [site oficial](https://www.python.org/downloads/).
-   - Tenha o Git instalado e configurado em sua máquina. Você pode encontrar instruções de instalação e configuração no [site oficial do Git](https://git-scm.com/).
    - Renomeie os arquivos `entry_example.txt` e `repositories_example.txt` para `entry.txt` e `repositories.txt`
 
 2. **Instalar Dependências**:
