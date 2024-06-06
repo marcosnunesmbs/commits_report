@@ -21,7 +21,14 @@ Este projeto consiste em uma ferramenta para gerar relatório de commits feitos 
    - No arquivo `repositories.txt`, liste os repositórios que deseja analisar. Cada linha do arquivo deve conter o nome e o caminho do repositório separados por vírgula.
 
 4. **Execução**:
-   - Execute o script Python `analyze_commits.py` para iniciar a análise dos commits. Certifique-se de estar no diretório onde o script está localizado.
+   - Execute o script Python `main.py` para iniciar a análise dos commits. Certifique-se de estar no diretório onde o script está localizado.
+   ~~~shell
+   python main.py
+   ~~~
+    Ou
+   ~~~shell
+   python3 main.py
+   ~~~
    - Durante a execução, o script irá fornecer informações sobre cada etapa do processo e em qual repositório está trabalhando.
 
 4. **Resultados**:
