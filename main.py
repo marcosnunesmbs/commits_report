@@ -8,7 +8,7 @@ def run_git_log_command(repo_path, author, since_date, diff_filter, repo_name):
     command = (
         f"cd {repo_path} && "
         f"git log --name-only --diff-filter={diff_filter} --since={since_date} "
-        f"--all --pretty=format:\"'%ad','%s#%h'\" --date=format:'%Y-%m-%d%H:%M:%S' --author={author}"
+        f"--all --pretty=format:\"'%ad','%s#%H'\" --date=format:'%Y-%m-%d%H:%M:%S' --author={author}"
     )
     result = subprocess.run(command, shell=True, capture_output=True, text=True)
     print(f"Logs do repositório '{repo_name}' obtidos com sucesso.")
@@ -25,6 +25,7 @@ def parse_git_log(git_log_output, repo_name):
             date, message = line.strip().split("','")
             date = date.strip("'")
             message, commit_hash = message.rsplit('#', 1)
+            commit_hash = commit_hash[:10]
             date_obj = datetime.strptime(date, '%Y-%m-%d%H:%M:%S')
             date_year_month_day = date_obj.strftime('%Y-%m-%d')
             current_commit = {'date': date_year_month_day, 'message': message, 'commit_hash': commit_hash, 'files': []}
