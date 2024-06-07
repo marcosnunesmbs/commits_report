@@ -34,7 +34,7 @@ def parse_git_log(git_log_output, repo_name):
             extension = os.path.splitext(file_path)[1].lower() if file_path else None
             date_obj = datetime.strptime(current_commit['date'], '%Y-%m-%d')
             date_year_month_day = date_obj.strftime('%Y-%m-%d')
-            data.append({'date': date_year_month_day, 'path': formatted_entry, 'extension': extension})
+            data.append({'date': date_year_month_day, 'repository': repo_name, 'path': formatted_entry, 'extension': extension})
 
     print(f"Logs do repositório '{repo_name}' analisados com sucesso.")
     return data
@@ -65,7 +65,7 @@ def process_repositories(repo_list, author, since_date):
     all_modifications_data = []
     all_additions_data = []
     
-    ignored_extensions = ['.png', '.jpg', '.jpeg', '.gif', '.pdf', '.json', '.tff', '.woff', '.woff2', '.eot', '.svg', '.ico', '.mp4', '.mp3', '.wav', '.avi', '.mov', '.webm', '.zip', '.rar', '.7z', '.tar', '.gz', '.bz2', '.xz', '.exe', '.dll', '.so', '.a', '.lib', '.obj', '.o', '.pyc', '.class', '.jar', '.war', '.ear', '.tar.gz', '.tar.bz2', '.tar.xz', '.tar.zst', '.tar.lz', '.tar.lzma', '.tar.sz', '.tar.lzo', '.tar.lz4', '.tar.zstd', '.txt']
+    ignored_extensions = ['.png', '.jpg', '.jpeg', '.gif', '.pdf', '.json', '.ttf','.tff', '.woff', '.woff2', '.eot', '.svg', '.ico', '.mp4', '.mp3', '.wav', '.avi', '.mov', '.webm', '.zip', '.rar', '.7z', '.tar', '.gz', '.bz2', '.xz', '.exe', '.dll', '.so', '.a', '.lib', '.obj', '.o', '.pyc', '.class', '.jar', '.war', '.ear', '.tar.gz', '.tar.bz2', '.tar.xz', '.tar.zst', '.tar.lz', '.tar.lzma', '.tar.sz', '.tar.lzo', '.tar.lz4', '.tar.zstd', '.txt']
     
     for repo in repo_list:
         repo_path = repo['path']
