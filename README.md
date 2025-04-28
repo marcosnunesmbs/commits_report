@@ -53,8 +53,8 @@ since_date=DATA_DESDE
 Este arquivo contém a lista de repositórios que deseja analisar, no formato a seguir:
 
 ```
-NOME-REPOSITORIO1,C:\AMINHO\REPOSITORI\O1
-NOME-REPOSITORIO2,C:\AMINHO\REPOSITORI\O2
+NOME-REPOSITORIO1,C:\CAMINHO\REPOSITORI\O1
+NOME-REPOSITORIO2,C:\CAMINHO\REPOSITORI\O2
 ```
 
 Cada linha deve conter o nome e o caminho do repositório, separados por vírgula.
